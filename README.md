@@ -13,5 +13,5 @@ This project finished by JEFFY/WILLIAM/MAHS on 2012
 Below is the main tools and technology used in the project:
 
 html+css+jquery(including some HTML5 & CSS3)
-play framework
+play framework 
 mysql
