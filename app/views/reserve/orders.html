@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lane="cn">
+<head>
+    <meta charset="utf-8">
+    <title>图书馆座位管理系统</title>
+    <link rel="stylesheet" href="/public/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="stylesheet" href="/public/stylesheets/manage.css">
+
+</head>
+
+
+
+<body class="usersBody">
+
+<header id="header">
+	<div class="logo">图书馆座位管理系统 V1.0</div>
+	<div class="watermark">
+		<div>LIBERY</div> 
+		<div>SEAT</div> 
+		<div>SYSTEM FOR</div>
+	</div>
+	<div class="userInfo">
+		<div class="loginFormSection">
+			<div class="loginForm">
+				<input type="text" class="input-small" placeholder="学号">
+  				<input type="password" class="input-small" placeholder="密码">
+			</div>
+		</div>
+		<div id="login">Login</div>
+	</div>
+	<div class="findBtn funBtn">查询预约</div>
+</header>
+<div class="subnav subnav-fixed">
+	<ul class="nav nav-pills">
+	  <li class=""><a href="#typography">座位预约管理</a></li>
+	  <li class=""><a href="#code">用户管理</a></li>
+	  <li class=""><a href="#tables">座位管理</a></li>
+	</ul>
+</div>
+
+<div class="pagerTitle clearfix">
+	<div class="text">座位预约管理</div>
+  <div class="findForm findFormHide">
+    <input type="text" placeholder="编号">Or
+    <input type="text" placeholder="学号">
+    <button type="button" class="btn btn-info">查询</button>
+  </div>
+	<div class="triangle"></div>
+</div>
+
+
+<table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+        <th>预约编号</th>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>学院</th>
+        <th>预约的座位</th>
+        <th>功能</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="order1">
+        <td>10</td>
+        <td >3109006385</td>
+        <td class="muted">张三</td>
+        <td>计算机学院</td>
+        <td>7楼D区2号桌6号座位</td>
+        <td>
+        	<button class="btn btn-danger" type="button" id="delete">删除预约</button>
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr id="order1">
+        <td>11</td>
+        <td >3109006385</td>
+        <td class="muted">李四</td>
+        <td>应用数学学院</td>
+        <td>7楼D区2号桌7号座位</td>
+        <td>
+        	<button class="btn btn-danger" type="button" id="delete">删除预约</button>
+        </td>
+      </tr>
+    </tbody>
+     <tbody>
+      <tr id="order1">
+        <td>12</td>
+        <td >3109006385</td>
+        <td class="muted">王五</td>
+        <td>轻化学院</td>
+        <td>7楼D区2号桌8号座位</td>
+        <td>
+        	<button class="btn btn-danger" type="button" id="delete">删除预约</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<div class="pagination">
+	<ul>
+	  <li class="disabled"><a href="#">«</a></li>
+	  <li class="active"><a href="#">1</a></li>
+	  <li><a href="#">2</a></li>
+	  <li><a href="#">3</a></li>
+	  <li><a href="#">4</a></li>
+	  <li><a href="#">»</a></li>
+	</ul>
+</div>
+
+<!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+<script src="/public/javascripts/jquery.min.js"></script>
+<script src="/public/javascripts/bootstrap.min.js"></script>
+
+<script>
+  $('.findBtn').on('click',function(){
+    $('.findForm').toggleClass('findFormHide');
+  });
+
+	$(document).on('click','.btn[cmd=delete]',function(){
+		//var id = this.parentNode.parentNode.id;
+		var id = $(this).parents('tr')[0].id;
+		alert('你要删除的是预约是'+id);
+	});
+	$(document).on('click','.btn[cmd=update]',function(){
+		//var id = this.parentNode.parentNode.id;
+		var $this = $(this);
+		var id = $this.parents('tr')[0].id;
+		var itemDoms = $('#'+id+' td:lt(6)');	
+		if(!$this.hasClass('btn-warning')){			
+			$this.text('确认修改');		
+			itemDoms.attr('contenteditable','true');
+		}else{
+			$this.text('修改预约');
+			itemDoms.attr('contenteditable','false');
+		}
+		$this.toggleClass('btn-warning');		
+		itemDoms.toggleClass('onUpdate');
+	});
+</script>
+
+</body>
+
+
+
+
+
+</html>

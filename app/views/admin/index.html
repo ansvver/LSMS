@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN"
+        "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>图书馆座位管理系统</title>
+    <link rel="stylesheet" href="/public/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+
+<body>
+	<header id="header">
+		<div class="logo">图书馆座位管理系统 V1.0</div>
+		<div class="watermark">
+			<div>LIBERY</div> 
+			<div>SEAT</div> 
+			<div>SYSTEM FOR</div>
+		</div>
+
+		<div class="userInfo">
+			<div class="loginFormSection">
+				<div class="loginForm">
+					<input type="text" class="input-small" placeholder="学号" id="user_num">
+	  				<input type="password" class="input-small" placeholder="密码" id="password">
+				</div>
+			</div>
+			
+		
+			<div id="login">Login</div>
+		</div>
+		
+	</header>
+
+	<nav id="building">	
+		<div class="rooftop">
+			<div class="triangle1"></div>
+		</div>
+
+		<div class="mod_line">
+           
+           <div class="line line1"></div>
+           <div class="dian dian1"></div>
+           
+           <div class="line line2"></div>
+           <div class="dian dian2"></div>
+           <div class="line line3"></div>
+           <div class="dian dian3"></div>
+           <div class="line line4"></div>
+           <div class="dian dian4"></div>
+           <div class="line line5"></div>
+           <div class="dian dian5"></div>
+           <div class="line line6"></div>
+           <div class="dian dian6"></div>
+           <div class="line line7"></div>
+           <div class="dian dian7"></div>
+           <div class="line line8"></div>
+        </div>
+
+		<ul class="body" id="navbar">
+			<li class="floorNav active" tabIndex="1">
+				<span>馆藏各类样本书</span>
+				<span>中外文工具书,检索期刊</span>
+			</li>	
+			<li class="floorNav" tabIndex="2">
+				<span>外文图书,计算机类图书</span>
+				<span>建筑工程类图书</span>
+			</li>
+			<li class="floorNav" tabIndex="3">
+				<span>中文自然科学</span>
+				<span>工程类图书</span>
+			</li>
+			<li class="floorNav" tabIndex="4">
+				<span>人文社科图书</span>
+			</li>
+			<li class="floorNav" tabIndex="5">
+				<span>报刊阅览室</span>
+				<span>中外文现刊、过刊</span>
+			</li>
+			<li class="floorNav" tabIndex="6">
+				<span>人工借还书服务</span>
+				<span>特藏书阅览区</span>
+			</li>
+			<li class="floorNav" tabIndex="7">
+				<span>提存书库</span>
+				<span>受赠教材借阅室</span>
+			</li>
+		</ul>
+		
+	</nav>
+
+	<div id="content">
+		<section class="floor floor1" id="floor1">
+			<div class="map">
+				<div class="block blockA">
+				<!-- 	<div class="triangle"></div> -->
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+					
+					
+				</div>
+				<div class="block blockB">
+					<div class="windowRoom">阳台</div>
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+				</div>
+				<div class="block blockC">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+
+				</div>
+				<div class="block blockD">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockE"></div>
+				<div class="block blockF">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockG">
+
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+					
+				</div>
+				<div class="block blockH">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="washRoom">
+						<div class="man">男厕</div>
+						<div class="man">还是男厕</div>
+					</div>
+				</div>	
+				<div class="block blockI">
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+				</div>
+			</div>
+		</section>
+		<section class="floor floor2" id="floor2">
+			<div class="map">
+				<div class="block blockA">
+				<!-- 	<div class="triangle"></div> -->
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+					
+					
+				</div>
+				<div class="block blockB">
+					<div class="windowRoom">阳台</div>
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+				</div>
+				<div class="block blockC">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+
+				</div>
+				<div class="block blockD">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockE"></div>
+				<div class="block blockF">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockG">
+
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+					
+				</div>
+				<div class="block blockH">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="washRoom">
+						<div class="man">男厕</div>
+						<div class="man">还是男厕</div>
+					</div>
+				</div>	
+				<div class="block blockI">
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="floor floor3" id="floor3">
+			<div class="map">
+				<div class="block blockA">
+				<!-- 	<div class="triangle"></div> -->
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+					
+					
+				</div>
+				<div class="block blockB">
+					<div class="windowRoom">阳台</div>
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+				</div>
+				<div class="block blockC">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+
+				</div>
+				<div class="block blockD">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockE"></div>
+				<div class="block blockF">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockG">
+
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+					
+				</div>
+				<div class="block blockH">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="washRoom">
+						<div class="man">男厕</div>
+						<div class="man">还是男厕</div>
+					</div>
+				</div>	
+				<div class="block blockI">
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="floor floor4" id="floor4">
+			<div class="map">
+				<div class="block blockA">
+				<!-- 	<div class="triangle"></div> -->
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+					
+					
+				</div>
+				<div class="block blockB">
+					<div class="windowRoom">阳台</div>
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+				</div>
+				<div class="block blockC">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+
+				</div>
+				<div class="block blockD">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockE"></div>
+				<div class="block blockF">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockG">
+
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+					
+				</div>
+				<div class="block blockH">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="washRoom">
+						<div class="man">男厕</div>
+						<div class="man">还是男厕</div>
+					</div>
+				</div>	
+				<div class="block blockI">
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+				</div>
+			</div>
+		</section>
+		<section class="floor floor5" id="floor5">
+			<div class="map">
+				<div class="block blockA">
+				<!-- 	<div class="triangle"></div> -->
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+					
+					
+				</div>
+				<div class="block blockB">
+					<div class="windowRoom">阳台</div>
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+				</div>
+				<div class="block blockC">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+
+				</div>
+				<div class="block blockD">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockE"></div>
+				<div class="block blockF">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockG">
+
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+					
+				</div>
+				<div class="block blockH">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="washRoom">
+						<div class="man">男厕</div>
+						<div class="man">还是男厕</div>
+					</div>
+				</div>	
+				<div class="block blockI">
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+				</div>
+			</div>
+		</section>
+		<section class="floor floor6" id="floor6">
+			<div class="map">
+				<div class="block blockA">
+				<!-- 	<div class="triangle"></div> -->
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+					
+					
+				</div>
+				<div class="block blockB">
+					<div class="windowRoom">阳台</div>
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+				</div>
+				<div class="block blockC">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+
+				</div>
+				<div class="block blockD">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockE"></div>
+				<div class="block blockF">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockG">
+
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+					
+				</div>
+				<div class="block blockH">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="washRoom">
+						<div class="man">男厕</div>
+						<div class="man">还是男厕</div>
+					</div>
+				</div>	
+				<div class="block blockI">
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+				</div>
+			</div>
+		</section>
+		<section class="floor floor7" id="floor7">
+			<div class="map">
+				<div class="block blockA">
+				<!-- 	<div class="triangle"></div> -->
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+					
+					
+				</div>
+				<div class="block blockB">
+					<div class="windowRoom">阳台</div>
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+				</div>
+				<div class="block blockC">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskC" index="4"></div>
+					<div class="desk deskB" index="5"></div>
+					<div class="desk deskB" index="6"></div>
+					<div class="desk deskB" index="7"></div>
+
+				</div>
+				<div class="block blockD">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockE"></div>
+				<div class="block blockF">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+
+				</div>
+				<div class="block blockG">
+
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+					
+				</div>
+				<div class="block blockH">
+					<div class="desk deskA" index="1"></div>
+					<div class="desk deskA" index="2"></div>
+					<div class="desk deskA" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="washRoom">
+						<div class="man">男厕</div>
+						<div class="man">还是男厕</div>
+					</div>
+				</div>	
+				<div class="block blockI">
+					<div class="desk deskB" index="1"></div>
+					<div class="desk deskB" index="2"></div>
+					<div class="desk deskB" index="3"></div>
+					<div class="desk deskA" index="4"></div>
+					<div class="desk deskA" index="5"></div>
+					<div class="desk deskA" index="6"></div>
+					<div class="desk deskC" index="7"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer></footer>
+<!--  modal -->
+<div class="modal" id="deskModal" style="display:none;">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>预订详细情况</h3>
+  </div>
+  <div class="modal-body">
+    <p>位置：<span class="floorValue"></span>楼<span class="blockValue"></span>区
+    	<span class="deskNumValue"></span>号桌<span>(0/8)</span></p>
+    <div class="deskInfo clearfix">
+    	<div class="seat seat1 notbook" index="1">1</div>
+    	<div class="seat seat2 notbook" index="2">2</div>
+    	<div class="seat seat3 notbook" index="3">3</div>
+    	<div class="seat seat4 notbook" index="4">4</div>
+    	<div class="seat seat5 notbook" index="5">5</div>
+    	<div class="seat seat6 notbook" index="6">6</div>
+    	<div class="seat seat7 notbook" index="7">7</div>
+    	<div class="seat seat8 notbook" index="8">8</div>
+    </div>
+    <p>座位详情：<span class="floorValue"></span>楼<span class="blockValue"></span>区
+    	<span class="deskNumValue"></span>号桌<span class="num">?</span>号座位</p>
+  </div>
+  <div class="modal-footer">
+    <a href="javascript:" class="btn" data-dismiss="modal">关闭</a>
+    <a href="javascript:" id="submitOrderBtn" class="btn btn-primary">确认预订</a>
+  </div>
+</div>
+
+<!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+<script src="/public/javascripts/jquery.min.js"></script>
+<script src="/public/javascripts/bootstrap.min.js"></script>
+
+<script>
+	/*******************   全局变量    ***********************/
+	
+	//这部分的是假设的数据，后台要动态输入
+	var desksData = &{deskJson};
+	var orderDesk = {};	
+	var user = null;
+	var floorNum = 1;	
+
+	var scrollDom;	
+	if(jQuery.browser.webkit){
+		scrollDom = $('body');
+	}else{
+		scrollDom = $('html');
+	};
+
+	/***********  一系类的辅助函数   *******************/
+
+	//render的辅助函数
+	var parseFields = function(value){
+		var strValue = parseInt(value).toString(2);
+		var len =strValue.length;
+		var arrayValue = [];
+
+		if(len < 8){
+			var temp = 0;
+			while(temp < (8-len)){
+				arrayValue.push('0');
+				temp++;
+			}
+
+		}
+		for(var i = 0; i<len; i++){
+			arrayValue.push(strValue.charAt(i));
+		}
+		return arrayValue;
+	}
+	//render的辅助函数
+	var getDom = function(desk){
+		return $('#floor'+desk.floor+' .block'+desk.block+' .desk[index='+desk.deskNum+']');
+	}
+	//废弃了
+	//根据dom节点获取在deskData
+	var getDeskData = function(dom){
+		var deskNum = dom.getAttribute('index');
+		//兼容ie没有使用classList的方便
+		var block = dom.parentNode.className.match(/block\w/)[0].charAt(5);
+		var floor = $(dom).parents('.floor')[0].id.charAt(5);
+		var status = dom.getAttribute('status');
+
+		console.log(deskNum);
+		console.log(block);
+		console.log(floor);
+
+		return {
+			floor:floor,
+			block:block,
+			deskNum:deskNum,
+			status:status
+		}
+
+
+		
+	}
+
+	var render = function(data){
+		var desk,deskDom;
+		for(var i = 0 ,len = data.length; i<len; i++){
+			desk = data[i];
+			deskDom = getDom(desk);
+			if(desk.isAble){
+				deskDom.addClass( (desk.extFields.reserveStatus == 255 ? 'booked' : 'book'));
+				deskDom.attr('status',desk.extFields.reserveStatus);
+			}else{
+				deskDom.addClass('booked');
+			}
+		}
+	}
+
+	
+	//初始化
+	$(function(){
+		//填充数据
+		render(desksData);
+
+		$("#deskModal").modal({
+		 	'backdrop':false,
+		    'keyboard':true,
+		    'show':false
+		 });
+
+		//每个座位的响应事件
+		$(document).on('click','.desk',function(){
+			var $this = $(this);
+			if($this.hasClass('booked')) return;
+
+			var seats = $('.deskInfo .seat');	
+			seats.removeClass('booked click');	//清除格式
+			var desk = getDeskData(this);
+			orderDesk = desk;	//把预订桌子的信息填充一部分先
+
+			//已经有部分预订了桌位的情况
+			if($this.hasClass('book')){
+									
+				var status = parseFields(desk.status);
+				
+				for(var i in status){
+					if(status[i] != '0'){
+						$(seats[i]).removeClass('notbook');
+						$(seats[i]).addClass('booked');
+					}
+				}
+				console.log(desk)
+				$('#deskModal .floorValue').text(desk.floor);
+				$('#deskModal .blockValue').text(desk.block);
+				$('#deskModal .deskNumValue').text(desk.deskNum);
+
+			}else{
+			//全部没有预订的情况
+				seats.addClass('notbook');
+			}
+
+
+			$("#deskModal").modal('show');
+		});
+
+
+
+		$('.deskInfo .seat').on('click',function(){
+			if(!$(this).hasClass('booked')){
+				$('.deskInfo .seat').removeClass('click');
+				$(this).addClass('click');
+			    $('#deskModal .num').text($(this).text());
+			}
+			
+		});
+
+		$('#navbar').on('click','.floorNav',function(){
+			// $('.floorNav').removeClass('active');
+			// $(this).addClass('active');
+			var index = this.getAttribute('tabIndex');
+			scrollDom.animate({'scrollTop':(index-1)*800},'slow');
+		});
+
+		$(document).on('scroll',function(){
+			var scrollY = window.scrollY;
+			var newFloorNum = Math.floor(scrollY/800)+1;
+			if(newFloorNum != floorNum){
+				$('.floorNav').removeClass('active');
+				$('.floorNav[tabIndex='+newFloorNum+']').addClass('active');
+				floorNum = newFloorNum;
+			}
+			//console.log(newFloorNum);
+		});
+
+		
+		$('#login').on('click',function(){
+			$.ajax({
+				url:"index/login",
+				dataType:"json",
+				cache:false,
+				type:"POST",
+				data:{
+					user_num:$('#user_num').val(),
+					password:$('#password').val()
+				},
+		      	success:function(request){
+			          user = request;
+			          console.log(user);
+			          alert(user.name + "登录成功！！！");
+			          $(".userInfo").remove();
+			          $("#header").append("<div align=right>" + user.name + "，欢迎您的使用！" + "</div>");
+			      },
+			      error:function(request){
+			        alert("登录失败，请重新输入！");
+			     }
+			})
+		});
+		
+		
+		
+		//提交预订的事件处理函数
+		$('#submitOrderBtn').on('click',function(){
+			var num = $('#deskModal .num').text();
+			if(num == '?'){
+				alert('请选择座位号');
+				return;
+			} else{
+				if(user == null){
+					alert('请先登录');
+					return;
+				} 
+			}
+			orderDesk.seatNum = $('#deskModal .click').text();
+
+			console.log(orderDesk);
+
+
+			//检查用户是否登录
+			
+			
+			
+			//上面得到的预约座位的详细参数内容orderDesk，下面的代码是ajax请求
+			
+			$.ajax({
+				url:"order/order",
+				dataType:"text",
+				cache:false,
+				type:"GET",
+				data:{
+					user_id: user.userId,
+					floor: orderDesk.floor,
+					block: orderDesk.block,
+					desk_num: orderDesk.deskNum,
+					seat_num: orderDesk.seatNum
+				},
+		      	success:function(request){
+			          if(request.length > 0) {
+			        	  alert("预订失败，请重新再试！");
+			        	  return;
+			          } else {
+			        	  alert("预订成功!");
+			        	  var target =  $('#deskModal .click');
+			        	  target.removeClass('notbook click');
+			        	  target.addClass('booked');
+						  
+			          }
+			      },
+			      error:function(request){
+			        alert("登录失败，请重新输入！");
+			     }
+			})
+
+		});
+
+	});
+
+
+</script>
+
+</body>
+
+
+
+
+
+</html>

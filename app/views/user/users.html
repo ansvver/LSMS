@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN"
+        "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>图书馆座位管理系统</title>
+    <link rel="stylesheet" href="/public/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/stylesheets//style.css">
+    <link rel="stylesheet" href="/public/stylesheets//manage.css">
+
+</head>
+
+<body class="usersBody">
+<header id="header">
+	<div class="logo">图书馆座位管理系统 V1.0 </div>
+	<div class="watermark">
+		<div>LIBERY</div> 
+		<div>SEAT</div> 
+		<div>SYSTEM FOR</div>
+	</div>
+	<div class="userInfo">
+		<div class="loginFormSection">
+			<div class="loginForm">
+				<input type="text" class="input-small" placeholder="学号">
+  				<input type="password" class="input-small" placeholder="密码">
+			</div>
+		</div>
+		<div id="login">Login</div>
+	</div>
+	<div class="addUserBtn funBtn">新增用户</div>
+  <div class="findBtn funBtn">查询用户</div>
+</header>
+<div class="subnav subnav-fixed">
+	<ul class="nav nav-pills">
+	  <li class=""><a href="/order/orderList">座位预约管理</a></li>
+	  <li class=""><a href="#code">用户管理</a></li>
+	  <li class=""><a href="#tables">座位管理</a></li>
+	</ul>
+</div>
+
+<div class="pagerTitle clearfix forUsers">
+	<div class="text">用户管理</div>
+  <!-- <div class="findForm findFormHide">
+    <input type="text" name="userNum" placeholder="学号">Or
+    <input type="text" name="name" placeholder="姓名">
+    <button id="findSubmit" type="button" class="btn btn-info">查询</button>
+  </div> -->
+  <div class="findForm findFormLong findFormHide">
+    <input type="text" name="userNum" placeholder="学号">Or
+    <input type="text" name="name" placeholder="姓名">Or
+    <input type="text" name="dept" placeholder="学院">
+    <button id="findSubmit" type="button" class="btn btn-info">查询</button>
+  </div>
+	<div class="triangle"></div>
+</div>
+
+
+<table class="userTable table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>密码</th>
+        <th>学院</th>
+        <th>预约次数</th>
+        <th>失约次数</th>
+        <th>功能</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="addUserForm" class="hidden">
+        <td><input type="text" name="userNum"></td>
+        <td><input type="text" name="name"></td>
+        <td><input type="text" name="password"></td>
+        <td><input type="text" name="dept"></td>
+        <td><input type="text" name="reserveTimes"></td>
+        <td><input type="text" name="breakTimes"></td>
+        <td>
+        <button id="addSubmit" class="btn btn-success" type="button">确认新增</button></td>
+        
+      </tr>
+      #{if pageInfo.getResult().size()}
+        #{list items:pageInfo.getResult(), as:'userInfo'}
+        
+        <tr id="${userInfo.getUserId()}">
+          <td class="muted">${userInfo.getUserNum()}</td>
+          <td>${userInfo.getName()}</td>
+          <td>${userInfo.getPassword()}</td>
+          <td>${userInfo.getDept()}</td>
+          <td>${userInfo.getReserveTimes()}</td>
+          <td>${userInfo.getBreakTimes()}</td>
+          <td>
+            <button class="btn btn-danger" type="button" cmd="delete">删除用户</button>
+            <button class="btn btn-primary" type="button" cmd="update">修改用户</button></td>
+        </tr>
+        #{/list}
+    #{/if}  
+    </tbody>
+  </table>
+
+<div class="pagination">
+	<ul>
+	  <li ><a href="userList?pageInfo.pageNo=${pageInfo.getPrePage()}&userNum=${userNum}&name=${name}&dept=${dept}">«</a></li>
+	  <li><a href="userList?pageInfo.pageNo=1&userNum=${userNum}&name=${name}&dept=${dept}">1</a></li>
+	  <li><a href="userList?pageInfo.pageNo=2&userNum=${userNum}&name=${name}&dept=${dept}">2</a></li>
+	  <li><a href="userList?pageInfo.pageNo=3&userNum=${userNum}&name=${name}&dept=${dept}">3</a></li>
+	  <li><a href="userList?pageInfo.pageNo=4&userNum=${userNum}&name=${name}&dept=${dept}">4</a></li>
+	  <li><a href="userList?pageInfo.pageNo=${pageInfo.getNextPage()}&userNum=${userNum}&name=${name}&dept=${dept}">»</a></li>
+	</ul>
+</div>
+
+<!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+<script src="/public/javascripts/jquery.min.js"></script>
+<script src="/public/javascripts/bootstrap.min.js"></script>
+
+<script>
+  $('.findBtn').on('click',function(){
+    $('.findForm').toggleClass('findFormHide');
+  });
+
+	$(document).on('click','.btn[cmd=delete]',function(){
+		//var id = this.parentNode.parentNode.id;
+		var id = $(this).parents('tr')[0].id;
+		var $removeTr = $(this).parents('tr');
+    alert("你要删除的是第" + id + "个同学");
+    var request = 'deleteUser?userId=' + id;
+    $.ajax({
+      url:request ,
+      dataType:"text",
+      cache:false,
+      type:"GET",
+      success:function(request){
+        if(request == "ok") {
+          $removeTr.remove();
+        }else {
+          alert(request);
+        }
+      },
+      error:function(request){
+        alert("请求失败");
+      }
+    });
+    
+	});
+	$(document).on('click','.btn[cmd=update]',function(){
+		//var id = this.parentNode.parentNode.id;
+		var $this = $(this);
+		var id = $this.parents('tr')[0].id;
+		var itemDoms = $('#'+id+' td:lt(6)');	
+		if(!$this.hasClass('btn-warning')){	
+			$this.text('确认修改');		
+			itemDoms.attr('contenteditable','true');
+		}else{
+      var request = 'updateUser';
+      $.ajax({
+        url:request ,
+        dataType:"text",
+        cache:false,
+        type:"GET",
+        data:{
+          userId:id,
+          userNum:$('#'+id+' td:eq(0)').html(),
+          name:$('#'+id+' td:eq(1)').html(),
+          password:$('#'+id+' td:eq(2)').html(),
+          dept:$('#'+id+' td:eq(3)').html(),
+          reserveTimes:$('#'+id+' td:eq(4)').html(),
+          breakTimes:$('#'+id+' td:eq(5)').html()
+        },
+        success:function(request){
+          var result = request.substring(0, 4);
+            if(request.length > 4 && request.substring(0,4) == 'fail') {
+            alert(request);
+          }else {
+            alert("修改用户成功");
+          }
+        },
+        error:function(request){
+          alert("请求失败");
+        }
+      });
+
+			$this.text('修改预订');
+			itemDoms.attr('contenteditable','false');
+		}
+		$this.toggleClass('btn-warning');		
+		itemDoms.toggleClass('onUpdate');
+	});
+    
+  $('.addUserBtn').toggle(
+    function(){
+    $('#addUserForm').show();},
+    function(){
+      $('#addUserForm').hide();
+  });
+
+  $('#addSubmit').click(function(){
+      //这里应该是继续ajax，ajax成功后执行下面的函数做dom节点处理
+    var request = 'addUser';
+    $.ajax({
+      url:request ,
+      dataType:"text",
+      cache:false,
+      type:"GET",
+      data:{
+        userNum:$('#addUserForm [name=userNum]').val(),
+        name:$('#addUserForm [name=name]').val(),
+        password:$('#addUserForm [name=password]').val(),
+        dept:$('#addUserForm [name=dept]').val(),
+        reserveTimes:$('#addUserForm [name=reserveTimes]').val(),
+        breakTimes:$('#addUserForm [name=breakTimes]').val()
+      },
+      success:function(request){
+        var result = request.substring(0, 4);
+        if(request.length > 4 && request.substring(0,4) == 'fail') {
+          alert(request);
+        }else {
+          alert("新增用户成功");
+          addSuccess(request);
+        }
+      },
+      error:function(request){
+        alert("请求失败");
+      }
+    });
+    
+  });
+
+  $('#findSubmit').click(function(){
+    var userNum = $('.findForm [name=userNum]').val();
+    var name = $('.findForm [name=name]').val();
+    var dept = $('.findForm [name=dept]').val();
+    window.location.href="userList?userNum="+userNum+"&name="+name+"&dept="+dept;
+  })
+
+  function addSuccess(userId){
+      var userNum = $('#addUserForm [name=userNum]').val();
+      var name = $('#addUserForm [name=name]').val();
+      var password = $('#addUserForm [name=password]').val();
+      var dept = $('#addUserForm [name=dept]').val();
+      var reserveTimes = $('#addUserForm [name=reserveTimes]').val();
+      var breakTimes = $('#addUserForm [name=breakTimes]').val();
+
+      var tr = '<tr id='+userId +'><td>'+userNum+'</td><td>'+name+'</td><td>'+password+'</td><td>'+ 
+                dept+'</td><td>'+ reserveTimes+'</td>'+'</td><td>'+ breakTimes+'</td>' +
+          '<td><button class="btn btn-danger" type="button" cmd="delete">删除预订</button>'+
+          '<button class="btn btn-primary" type="button" cmd="update">修改预订</button></td>'+
+          '</tr>';
+      $('#addUserForm').after(tr);
+  }
+
+</script>
+
+</body>
+
+
+
+
+
+
+</html>
