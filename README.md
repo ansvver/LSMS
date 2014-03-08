@@ -8,7 +8,7 @@ This is just a learning project. And the background is that we want to make a fu
 It's not good that sometimes we can see someone puts their books or papers to 'announce' 'their' chairs.
 We wanna build a system to manage the resouce.
 
-This project finished by JEFFY/WILLIAM/MAHS on 2012
+This project finished by EDWARD/WILLIAM/MAHS on 2012
 
 Below is the main tools and technology used in the project:
 
